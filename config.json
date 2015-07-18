@@ -2,7 +2,7 @@
     "reactApp": {
         "src": "./src/app/",
         "extname": "jsx",
-        "build": "./build/static/js/"
+        "build": "./build/js/"
     },
     "styles": {
         "css":{
@@ -13,19 +13,19 @@
             "src": "./src/styles/",
             "extname": "scss"
         },
-        "build": "./build/static/css/"
+        "build": "./build/css/"
     },
     "script": {
         "src": "./src/js",
-        "build": "./build/static/js/"
+        "build": "./build/js/"
     },
     "vendor": {
         "require": [
-        "react/addons"
+        "react"
         ],
 
       "build": {
-          "dirname": "./build/static/js/",
+          "dirname": "./build/js/",
           "name": "vendor.js"
       }
     }
