@@ -1,11 +1,11 @@
 {
   "name": "react-init",
   "author": "Pedro Palacios",
-  "license": "GPLv3",
-  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesitos/react-init"
+    "url": "https://github.com/acastemoreno/react-sudoku-solver"
   },
   "dependencies": {
     "aliasify": "^1.7.2",

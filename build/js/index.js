@@ -31,7 +31,9 @@ function drainQueue() {
         currentQueue = queue;
         queue = [];
         while (++queueIndex < len) {
-            currentQueue[queueIndex].run();
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
         }
         queueIndex = -1;
         len = queue.length;
@@ -83,7 +85,6 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-// TODO(shtylman)
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
@@ -21954,7 +21955,7 @@ var Sudoku = React.createClass({displayName: "Sudoku",
             return fila.join();
         }).join("/");
         var self = this;
-        this.request.open('GET', "http://162.243.184.27/rest/" + s, true);
+        this.request.open('GET', "http://localhost:4730/rest/" + s, true);
         this.request.onload = function() {
             if (this.status >= 200 && this.status < 400){
                 var data = JSON.parse(this.response);

@@ -21,7 +21,7 @@ var Sudoku = React.createClass({
             return fila.join();
         }).join("/");
         var self = this;
-        this.request.open('GET', "http://162.243.184.27/rest/" + s, true);
+        this.request.open('GET', "http://localhost:4730/rest/" + s, true);
         this.request.onload = function() {
             if (this.status >= 200 && this.status < 400){
                 var data = JSON.parse(this.response);
